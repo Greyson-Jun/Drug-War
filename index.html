@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drug Pricing Explained: Costs, Pharmacies, PBMs, & Patient Care | Sungjoon Jun, PharmD</title>
+    <title>The High Price of Survival: Unpacking America’s Drug Cost Crisis</title>
     <meta name="description" content="Explore why prescription drugs are expensive in the US, the decline of neighborhood pharmacies, the role of PBMs, and government efforts. Understand the impact on patient care and find solutions for affordable healthcare.">
     <meta name="keywords" content="drug pricing, prescription costs, pharmacy benefit managers, PBMs, neighborhood pharmacies, pharmacy deserts, healthcare costs, Medicare negotiation, Inflation Reduction Act, patient care, Sungjoon Jun PharmD">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -38,13 +38,34 @@
         .nav-link { transition: color 0.3s; }
         .nav-link:hover { color: #0ea5e9; } /* sky-500 */
         .highlight-box { background-color: #fffbeb; border-left: 4px solid #f59e0b; padding: 1rem; margin-bottom: 1rem; border-radius: 0.25rem; } /* amber-50, amber-500 */
+        .inline-reference { cursor: pointer; text-decoration: underline; text-underline-offset: 2px; color: #0284c7; font-weight: 500; } /* sky-600 */
+        #referenceTooltip {
+            position: absolute;
+            z-index: 100;
+            background-color: #1f2937; /* neutral-800 */
+            color: white;
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            font-size: 0.875rem; /* text-sm */
+            max-width: 300px;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+            pointer-events: none; /* Allows clicks to pass through when hidden */
+            display: none; /* Hidden by default */
+        }
+        #referenceTooltip.visible {
+            opacity: 1;
+            display: block;
+            pointer-events: auto;
+        }
     </style>
 </head>
 <body class="bg-amber-50 text-neutral-800">
 
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex flex-col sm:flex-row justify-between items-center">
-            <a href="#" class="text-xl font-bold text-sky-700 mb-2 sm:mb-0">Drug Pricing Insights</a>
+            <a href="#" class="text-xl font-bold text-sky-700 mb-2 sm:mb-0">Price of Survival</a>
             <div class="space-x-2 sm:space-x-4 text-sm sm:text-base flex flex-wrap justify-center">
                 <a href="#intro" class="nav-link text-neutral-600">Intro</a>
                 <a href="#why-expensive" class="nav-link text-neutral-600">Why So Expensive?</a>
@@ -60,15 +81,15 @@
     <main class="container mx-auto px-6 py-8">
 
         <section id="intro" class="mb-12 pt-16 -mt-16">
-            <h2 class="section-title">The Real Reason Your Medications Cost a Fortune</h2>
+            <h2 class="section-title">The High Price of Survival: Unpacking America’s Drug Cost Crisis</h2>
             <p class="content-text text-sm mb-4">By Sungjoon Jun, PharmD</p>
             <p class="content-text mb-4">
-                The cost of prescription drugs in the United States casts a long shadow over the healthcare system, with Americans bearing a financial burden unmatched by their counterparts in other wealthy nations. Many individuals face the daunting prospect of choosing between vital medications and other essential needs, a situation highlighting the urgent need to understand the drivers behind these soaring prices. Adding to the complexity is the evolving landscape of pharmacy services, marked by the noticeable decline of familiar neighborhood pharmacies. This interactive guide explores the intricate web of factors contributing to high drug costs and the changing face of pharmacy, based on the analysis presented in the blog post "The Real Reason Your Medications Cost a Fortune (and What's Happening to Your Local Pharmacy)".
+                The cost of prescription drugs in the United States casts a long shadow over the healthcare system, with Americans bearing a financial burden unmatched by their counterparts in other wealthy nations.<span class="inline-reference" data-ref-ids="2,3,4,5,6,24"></span> Many individuals face the daunting prospect of choosing between vital medications and other essential needs, a situation highlighting the urgent need to understand the drivers behind these soaring prices. Adding to the complexity is the evolving landscape of pharmacy services, marked by the noticeable decline of familiar neighborhood pharmacies. Once cornerstones of communities, these local establishments are increasingly giving way to large chain stores and mail-order services, altering the way people access their medications.<span class="inline-reference" data-ref-ids="7,8,9,10,11"></span> This interactive guide explores the intricate web of factors contributing to high drug costs and the changing face of pharmacy, exploring the roles of patents, research, insurance, and government intervention in this critical aspect of healthcare.
             </p>
         </section>
 
         <section id="why-expensive" class="mb-12 pt-16 -mt-16">
-            <h2 class="section-title">Unlocking the Mystery: Why Are Prescription Drugs So Expensive?</h2>
+            <h2 class="section-title">The Mystery: Why Are Prescription Drugs So Expensive?</h2>
             <p class="content-text mb-6">
                 Several interconnected factors contribute to the high cost of prescription drugs in the United States. This section delves into the primary drivers, from international price disparities to the influence of patents, research costs, and lobbying efforts, as detailed in the source blog.
             </p>
@@ -136,10 +157,10 @@
                 </p>
                 <h4 class="font-semibold text-lg mb-2 text-neutral-700">The Rise of Pharmacy Deserts:</h4>
                 <p class="content-text mb-4">
-                    Pharmacy closures directly contribute to "pharmacy deserts" – areas with limited pharmacy access. This disproportionately affects rural, low-income, and minority communities.
+                    Pharmacy closures directly contribute to "pharmacy deserts" – areas with limited pharmacy access. This disproportionately affects rural, low-income, and minority communities.<span class="inline-reference" data-ref-ids="7,9,10,11"></span>
                 </p>
                 <p class="content-text">
-                    Consequences include reduced access to medications, counseling, and public health services like vaccinations, leading to poorer health outcomes and increased health disparities.
+                    Consequences include reduced access to medications, counseling, and public health services like vaccinations, leading to poorer health outcomes and increased health disparities.<span class="inline-reference" data-ref-ids="9,10,11"></span>
                 </p>
             </div>
         </section>
@@ -161,18 +182,17 @@
                 <h3 class="text-xl font-semibold mb-3 text-sky-700">How PBMs Operate: A Simplified View</h3>
                 <p class="content-text mb-4">PBMs negotiate prices, manage formularies, and process claims. Click terms for explanations.</p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-2 items-stretch my-6">
-                    <div class="pbm-diagram-node md:col-span-1" data-info="Drug Manufacturers produce medications and offer rebates to PBMs for favorable formulary placement, influencing which drugs are prioritized.">Drug Manufacturer</div>
-                    <div class="pbm-diagram-arrow md:col-span-1">&#10132;</div>
-                    <div class="pbm-diagram-node md:col-span-1" data-info="Pharmacy Benefit Managers (PBMs) negotiate with manufacturers for rebates, create formularies for health plans, and set pharmacy reimbursement rates. They may use 'spread pricing' or apply DIR fees.">PBM</div>
-                    <div class="pbm-diagram-arrow md:col-span-1">&#10132;</div>
-                    <div class="pbm-diagram-node md:col-span-1" data-info="Health Plans / Insurers contract with PBMs to manage prescription drug benefits for their members (patients), relying on PBMs to control costs.">Health Plan / Insurer</div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-2 items-center my-2">
-                    <div class="md:col-start-3 md:col-span-1 pbm-diagram-arrow transform rotate-90 md:rotate-0">&#11015;</div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-2 items-center my-6">
-                     <div class="pbm-diagram-node md:col-start-3 md:col-span-1" data-info="Pharmacies dispense medications to patients and are reimbursed by PBMs, often at rates that are contentious, especially for independent pharmacies who may be paid less than drug acquisition cost.">Pharmacy</div>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4 my-6">
+                    <div class="pbm-diagram-node w-full md:w-auto max-w-xs" data-info="Drug Manufacturers produce medications and offer rebates to PBMs for favorable formulary placement, influencing which drugs are prioritized.">Drug Manufacturer</div>
+                    <div class="md:hidden pbm-diagram-arrow">&#11015;</div> <div class="hidden md:block pbm-diagram-arrow">&#10132;</div> <div class="pbm-diagram-node w-full md:w-auto max-w-xs" data-info="Pharmacy Benefit Managers (PBMs) negotiate with manufacturers for rebates, create formularies for health plans, and set pharmacy reimbursement rates. They may use 'spread pricing' or apply DIR fees.">PBM</div>
+                    <div class="md:hidden pbm-diagram-arrow">&#11015;</div>
+                    <div class="hidden md:block pbm-diagram-arrow">&#10132;</div>
+
+                    <div class="pbm-diagram-node w-full md:w-auto max-w-xs" data-info="Health Plans / Insurers contract with PBMs to manage prescription drug benefits for their members (patients), relying on PBMs to control costs.">Health Plan / Insurer</div>
+                    <div class="md:hidden pbm-diagram-arrow">&#11015;</div>
+                    <div class="hidden md:block pbm-diagram-arrow">&#10132;</div>
+
+                    <div class="pbm-diagram-node w-full md:w-auto max-w-xs" data-info="Pharmacies dispense medications to patients and are reimbursed by PBMs, often at rates that are contentious, especially for independent pharmacies who may be paid less than drug acquisition cost.">Pharmacy</div>
                 </div>
 
                 <div id="pbmInfoBox" class="mt-4 p-4 bg-sky-50 border border-sky-200 rounded-md content-text hidden">
@@ -202,7 +222,7 @@
             </p>
             <div class="p-6 bg-white rounded-lg shadow">
                 <h3 class="text-xl font-semibold mb-3 text-sky-700">The Inflation Reduction Act (IRA)</h3>
-                <p class="content-text mb-4">The IRA (2022) allows Medicare to negotiate prices for some high-cost drugs (effective 2026), caps out-of-pocket costs for Medicare Part D, and penalizes price hikes above inflation.</p>
+                <p class="content-text mb-4">The IRA (2022) allows Medicare to negotiate prices for some high-cost drugs (effective 2026), caps out-of-pocket costs for Medicare Part D, and penalizes price hikes above inflation.<span class="inline-reference" data-ref-ids="1,19,20,21,22"></span></p>
                 
                 <div class="mb-6">
                     <h4 class="font-semibold text-lg mb-2 text-neutral-700">First 10 Drugs for Medicare Price Negotiation (Effective 2026):</h4>
@@ -233,7 +253,7 @@
                     </div>
                     <div class="highlight-box">
                         <h4 class="font-semibold text-lg mb-2 text-neutral-700">Challenges & State Initiatives:</h4>
-                        <p class="content-text">Opposition from the pharmaceutical industry (citing stifled innovation) and concerns about unintended consequences (limited access, shortages) persist. Many states pursue their own initiatives (transparency laws, cost caps, PDABs).</p>
+                        <p class="content-text">Opposition from the pharmaceutical industry (citing stifled innovation) and concerns about unintended consequences (limited access, shortages) persist. Many states pursue their own initiatives (transparency laws, cost caps, PDABs).<span class="inline-reference" data-ref-ids="23"></span></p>
                     </div>
                 </div>
             </div>
@@ -242,7 +262,7 @@
         <section id="conclusion" class="pt-16 -mt-16">
             <h2 class="section-title">Conclusion: Towards a Healthier and More Affordable Future</h2>
             <p class="content-text mb-4">
-                The high cost of prescription drugs and the decline of neighborhood pharmacies are complex, intertwined issues. Patents, R&D and marketing costs, lack of government negotiation power, and lobbying contribute to high prices. Independent pharmacies struggle under PBM pressures and competition.
+                The high cost of prescription drugs in the US and the decline of neighborhood pharmacies are complex and deeply intertwined issues driven by a confluence of factors. Patents and market exclusivity, the immense costs of research and development (and marketing), the lack of government negotiation power, and the significant influence of pharmaceutical lobbying all contribute to the exorbitant prices Americans face for their medications. Simultaneously, independent pharmacies are struggling to survive under pressure from PBMs' low reimbursement rates, competition from large chains and mail-order services, and broader economic challenges.
             </p>
             <p class="content-text mb-4">
                 In this intricate system, pharmaceutical manufacturers and Pharmacy Benefit Managers (PBMs) often emerge as the primary beneficiaries. Manufacturers profit from patent-protected high list prices, while PBMs gain from opaque rebate negotiations and practices like spread pricing. Conversely, patients bear the brunt of exorbitant out-of-pocket costs and face reduced access to care due to the proliferation of "pharmacy deserts." Independent pharmacies are also at a severe disadvantage, struggling with unsustainable reimbursement rates and competitive pressures that threaten their very existence.
@@ -292,6 +312,8 @@
             </ol>
         </section>
     </main>
+
+    <div id="referenceTooltip" class="absolute z-50 bg-neutral-800 text-white p-3 rounded-md shadow-lg text-xs max-w-xs opacity-0 transition-opacity duration-200"></div>
 
     <footer class="bg-neutral-800 text-neutral-300 text-center p-6 mt-12">
         <p>Author: Sungjoon Jun</p>
@@ -358,6 +380,41 @@
                 "<strong>Prime Therapeutics:</strong> Jointly owned by multiple Blue Cross Blue Shield plans."
             ]
         };
+
+        // References data for tooltip
+        const referencesData = [
+            { id: 1, text: "Dusetzina, L. B. (2023). Medicare Drug Price Negotiation — Early Decisions and What Comes Next. *New England Journal of Medicine*, 389(25), 2311–2313." },
+            { id: 2, text: "Mulcahy, A. W., et al. (2023). *International Prescription Drug Price Comparisons: Current Trends and Projections*. RAND Corporation." },
+            { id: 3, text: "KFF. (2023). *How Do U.S. Drug Prices Compare to Other Countries?*" },
+            { id: 4, text: "Congressional Budget Office. (2023). *Selected Options for Reducing the Federal Budget Deficit*." },
+            { id: 5, text: "National Academies of Sciences, Engineering, and Medicine. (2018). *Making Medicines Affordable: A National Imperative*. The National Academies Press." },
+            { id: 6, text: "OECD. (2023). *Health Statistics*." },
+            { id: 7, text: "Qato, D. M., et al. (2020). The Disappearing Community Pharmacy: An Update. *JAMA*, 324(19), 1974–1976." },
+            { id: 8, text: "National Community Pharmacists Association. (2023). *Independent Pharmacy Fact Sheet*." },
+            { id: 9, text: "Guadamuz, J. S., et al. (2022). Trends in Community Pharmacy Closures in the United States, 2009-2021. *JAMA Health Forum*, 3(11), e224522." },
+            { id: 10, text: "Kang, Y., et al. (2022). Pharmacy Deserts and Health Outcomes: A Systematic Review. *Journal of Urban Health*, 99(5), 841–853." },
+            { id: 11, text: "Centers for Disease Control and Prevention. (2023). *Access to Pharmacies in Underserved Areas*." },
+            { id: 12, text: "National Association of Boards of Pharmacy. (2021). *PBM Transparency and Accountability*." },
+            { id: 13, text: "Medicare Payment Advisory Commission. (2023). *Report to the Congress: Medicare Payment Policy*." },
+            { id: 14, text: "FTC. (2024). *Pharmacy Benefit Managers: The Powerful Middlemen Inflating Drug Costs and Squeezing Main Street Pharmacies*." },
+            { id: 15, text: "Congressional Research Service. (2023). *Pharmacy Benefit Managers (PBMs): An Overview*." },
+            { id: 16, text: "America's Health Insurance Plans (AHIP). (2023). *The Role of PBMs in Lowering Drug Costs*." },
+            { id: 17, text: "The Commonwealth Fund. (2022). *Understanding Pharmacy Benefit Managers*." },
+            { id: 18, text: "U.S. Government Accountability Office. (2023). *Medicare Part D: Action Needed to Address Price Concessions and DIR Fees*." },
+            { id: 19, text: "CMS. (2023). *Medicare Drug Price Negotiation: Initial Set of Drugs Selected*." },
+            { id: 20, text: "KFF. (2022). *Explaining the Prescription Drug Provisions in the Inflation Reduction Act*." },
+            { id: 21, text: "AARP. (2022). *How the Inflation Reduction Act will Lower Drug Costs for Seniors*." },
+            { id: 22, text: "The White House. (2022). *Fact Sheet: The Inflation Reduction Act Will Lower Health Care Costs for Millions of Americans*." },
+            { id: 23, text: "National Conference of State Legislatures. (2023). *State Action on Prescription Drug Costs*." },
+            { id: 24, text: "KFF. (2024). *The U.S. Prescription Drug System*." },
+            { id: 25, text: "Congressional Research Service. (2022). *Drug Pricing: Patents, Exclusivity, and the Role of Innovation*." },
+            { id: 26, text: "The Pew Charitable Trusts. (2021). *Understanding Drug Patents and Exclusivity*." },
+            { id: 27, text: "PhRMA. (2023). *Biopharmaceutical Research & Development: The Process*." },
+            { id: 28, text: "Drug Channels Institute. (2023). *The 2023-2024 Economic Report on U.S. Pharmacies and Pharmacy Benefit Managers*." },
+            { id: 29, text: "Centers for Medicare & Medicaid Services. (2023). *Medicare Part D Direct and Indirect Remuneration (DIR) Guidance*." },
+            { id: 30, text: "The Brookings Institution. (2023). *The Inflation Reduction Act and Drug Prices: What to Expect*." },
+            { id: 31, text: "American Pharmacists Association. (2023). *Pharmacist Reimbursement and DIR Fees*." }
+        ];
 
         function formatLabel(str, maxwidth){
             let sections = [];
@@ -456,6 +513,114 @@
             topPBMsList.appendChild(listItem);
         });
 
+        // Tooltip logic for inline references
+        const referenceTooltip = document.getElementById('referenceTooltip');
+
+        function getReferenceTextForTooltip(ids) {
+            const idArray = ids.split(',').map(id => parseInt(id.trim()));
+            let text = '';
+            idArray.forEach(id => {
+                const ref = referencesData.find(r => r.id === id);
+                if (ref) {
+                    text += `[${id}] ${ref.text}<br>`;
+                }
+            });
+            return text;
+        }
+
+        document.querySelectorAll('.inline-reference').forEach(span => {
+            let hideTimeout;
+
+            span.addEventListener('mouseover', function(e) {
+                clearTimeout(hideTimeout);
+                const refIds = this.dataset.refIds;
+                referenceTooltip.innerHTML = getReferenceTextForTooltip(refIds);
+                referenceTooltip.classList.add('visible'); // Use 'visible' class to manage display and opacity
+
+                // Position tooltip
+                const rect = this.getBoundingClientRect();
+                let top = rect.bottom + window.scrollY + 5;
+                let left = rect.left + window.scrollX;
+
+                // Adjust position if it goes off-screen
+                if (left + referenceTooltip.offsetWidth > window.innerWidth) {
+                    left = window.innerWidth - referenceTooltip.offsetWidth - 10;
+                }
+                if (top + referenceTooltip.offsetHeight > window.innerHeight + window.scrollY) {
+                    top = rect.top + window.scrollY - referenceTooltip.offsetHeight - 5;
+                }
+                if (left < 0) left = 10; // Prevent going off left edge
+
+                referenceTooltip.style.top = `${top}px`;
+                referenceTooltip.style.left = `${left}px`;
+            });
+
+            span.addEventListener('mouseout', function() {
+                hideTimeout = setTimeout(() => {
+                    referenceTooltip.classList.remove('visible');
+                }, 300); // Delay hiding for smoother experience
+            });
+
+            span.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent document click from immediately closing
+                const refIds = this.dataset.refIds;
+                // Toggle visibility on click
+                if (referenceTooltip.classList.contains('visible') && referenceTooltip.innerHTML === getReferenceTextForTooltip(refIds)) {
+                    referenceTooltip.classList.remove('visible');
+                } else {
+                    clearTimeout(hideTimeout);
+                    referenceTooltip.innerHTML = getReferenceTextForTooltip(refIds);
+                    referenceTooltip.classList.add('visible');
+
+                    const rect = this.getBoundingClientRect();
+                    let top = rect.bottom + window.scrollY + 5;
+                    let left = rect.left + window.scrollX;
+
+                    if (left + referenceTooltip.offsetWidth > window.innerWidth) {
+                        left = window.innerWidth - referenceTooltip.offsetWidth - 10;
+                    }
+                    if (top + referenceTooltip.offsetHeight > window.innerHeight + window.scrollY) {
+                        top = rect.top + window.scrollY - referenceTooltip.offsetHeight - 5;
+                    }
+                    if (left < 0) left = 10;
+
+                    referenceTooltip.style.top = `${top}px`;
+                    referenceTooltip.style.left = `${left}px`;
+                }
+            });
+        });
+
+        // Hide tooltip when clicking anywhere else on the document
+        document.addEventListener('click', (e) => {
+            if (!referenceTooltip.contains(e.target) && !e.target.classList.contains('inline-reference')) {
+                referenceTooltip.classList.remove('visible');
+            }
+        });
+
+        // Handle window resize to reposition tooltip if open
+        window.addEventListener('resize', () => {
+            if (referenceTooltip.classList.contains('visible')) {
+                const activeRef = document.querySelector('.inline-reference:hover, .inline-reference.clicked-active'); // Add a class for clicked active
+                if (activeRef) {
+                    const rect = activeRef.getBoundingClientRect();
+                    let top = rect.bottom + window.scrollY + 5;
+                    let left = rect.left + window.scrollX;
+
+                    if (left + referenceTooltip.offsetWidth > window.innerWidth) {
+                        left = window.innerWidth - referenceTooltip.offsetWidth - 10;
+                    }
+                    if (top + referenceTooltip.offsetHeight > window.innerHeight + window.scrollY) {
+                        top = rect.top + window.scrollY - referenceTooltip.offsetHeight - 5;
+                    }
+                    if (left < 0) left = 10;
+
+                    referenceTooltip.style.top = `${top}px`;
+                    referenceTooltip.style.left = `${left}px`;
+                } else {
+                    referenceTooltip.classList.remove('visible'); // Hide if no active element
+                }
+            }
+        });
     </script>
 </body>
 </html>
